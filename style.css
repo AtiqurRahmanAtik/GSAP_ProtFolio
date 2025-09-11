@@ -1,0 +1,39 @@
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    
+    font-size: 1.5rem;
+   
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+  
+    background-color: red;
+    color: black;
+    padding: 0.5rem;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 
+.PorfileImage{
+   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+; */
+
+/* .ProfileImage {
+   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+
+} */
