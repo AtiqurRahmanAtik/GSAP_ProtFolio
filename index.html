@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="style.css">
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+     <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+
+
      <!-- font-awesome -->
    
 
@@ -46,7 +54,7 @@
 
 
     <!-- main section -->
-    <main class="container mx-auto my-11 p-4 text-center">
+    <main class="container  mx-auto my-11 p-4 text-center">
 
 
 
@@ -187,7 +195,7 @@ Contact with me in any platform.
 
         <!-- Project Section -->
          <section class="my-11 p-4" id="projects">
-            <h1 class="text-center text-3xl font-semibold ">Projects </h1>
+            <h1 class="text-center overflow-hidden text-3xl font-semibold ">Projects </h1>
 
 
             <div class="my-11 p-4 bg-gray-100">
@@ -205,7 +213,7 @@ Contact with me in any platform.
 
     
         <!-- Education Section -->
-    <section id="education" class="my-11 p-4 bg-gray-100">
+    <section id="education" class="my-11 overflow-hidden p-4 bg-gray-100">
 
         <h2 class="text-3xl font-bold mb-4">Education</h2>
 
@@ -224,9 +232,154 @@ Contact with me in any platform.
 
 
 
+        <!-- Swiper Slider Section -->
+   
+<section class="p-8 bg-gray-100">
+  
+
+ 
+  <div class="swiper mySwiper w-full max-w-5xl mx-auto md:hidden">
+
+      <div>
+        <h1 class="text-center font-bold text-3xl my-5"> Image Slider </h1>
+      </div>
+    <div class="swiper-wrapper">
+
+      <!-- Slides (9 projects) -->
+      <div class="swiper-slide flex justify-center">
+        <a href="https://picsum.photos/id/1015/1200/800" data-lightbox="portfolio" data-title="Project 1">
+          <img src="https://picsum.photos/id/1015/500/300" class="rounded-xl object-fill shadow-lg hover:scale-105 transition" />
+        </a>
+      </div>
+
+      <div class="swiper-slide flex justify-center">
+        <a href="https://picsum.photos/id/1025/1200/800" data-lightbox="portfolio" data-title="Project 2">
+          <img src="https://picsum.photos/id/1025/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+        </a>
+      </div>
+
+      <div class="swiper-slide flex justify-center">
+        <a href="https://picsum.photos/id/1035/1200/800" data-lightbox="portfolio" data-title="Project 3">
+          <img src="https://picsum.photos/id/1035/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+        </a>
+      </div>
+
+      <div class="swiper-slide flex justify-center">
+        <a href="https://picsum.photos/id/1045/1200/800" data-lightbox="portfolio" data-title="Project 4">
+          <img src="https://picsum.photos/id/1045/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+        </a>
+      </div>
+
+      <div class="swiper-slide flex justify-center">
+        <a href="https://picsum.photos/id/1055/1200/800" data-lightbox="portfolio" data-title="Project 5">
+          <img src="https://picsum.photos/id/1055/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+        </a>
+      </div>
+      
+      <div class="swiper-slide flex justify-center">
+        <a href="https://picsum.photos/id/1065/1200/800" data-lightbox="portfolio" data-title="Project 6">
+          <img src="https://picsum.photos/id/1065/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+        </a>
+      </div>
+
+      <div class="swiper-slide flex justify-center">
+        <a href="https://picsum.photos/id/1075/1200/800" data-lightbox="portfolio" data-title="Project 7">
+          <img src="https://picsum.photos/id/1075/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+        </a>
+      </div>
+
+      <div class="swiper-slide flex justify-center">
+        <a href="https://picsum.photos/id/1085/1200/800" data-lightbox="portfolio" data-title="Project 8">
+          <img src="https://picsum.photos/id/1085/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+        </a>
+      </div>
+
+      <div class="swiper-slide flex justify-center">
+        <a href="https://picsum.photos/id/1095/1200/800" data-lightbox="portfolio" data-title="Project 9">
+          <img src="https://picsum.photos/id/1095/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+        </a>
+      </div>
+
+    </div>
+
+
+
+    <!-- Swiper Controls -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+
+
+ 
+  
+</section>
+
+ 
+
+
+
+<!-- LightBox2 Images Gallery-->
+  
+  <section class="mt-32 overflow-hidden">
+
+
+      <div>
+        <h1 class="text-center font-bold text-3xl my-5">Image Gallery</h1>
+
+      </div>
+
+
+     <div class=" md:grid grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <a href="https://picsum.photos/id/1015/1200/800" data-lightbox="portfolio" data-title="Project 1">
+      <img src="https://picsum.photos/id/1015/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </a>
+
+    <a href="https://picsum.photos/id/1025/1200/800" data-lightbox="portfolio" data-title="Project 2">
+      <img src="https://picsum.photos/id/1025/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </a>
+
+    <a href="https://picsum.photos/id/1035/1200/800" data-lightbox="portfolio" data-title="Project 3">
+      <img src="https://picsum.photos/id/1035/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </a>
+
+    <a href="https://picsum.photos/id/1045/1200/800" data-lightbox="portfolio" data-title="Project 4">
+      <img src="https://picsum.photos/id/1045/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </a>
+    
+    <a href="https://picsum.photos/id/1055/1200/800" data-lightbox="portfolio" data-title="Project 5">
+      <img src="https://picsum.photos/id/1055/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </a>
+
+    <a href="https://picsum.photos/id/1065/1200/800" data-lightbox="portfolio" data-title="Project 6">
+      <img src="https://picsum.photos/id/1065/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </a>
+
+    <a href="https://picsum.photos/id/1075/1200/800" data-lightbox="portfolio" data-title="Project 7">
+      <img src="https://picsum.photos/id/1075/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </a>
+
+    <a href="https://picsum.photos/id/1085/1200/800" data-lightbox="portfolio" data-title="Project 8">
+      <img src="https://picsum.photos/id/1085/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </a>
+
+    <a href="https://picsum.photos/id/1095/1200/800" data-lightbox="portfolio" data-title="Project 9">
+      <img src="https://picsum.photos/id/1095/500/300" class="rounded-xl shadow-lg hover:scale-105 transition" />
+    </a>
+
+  </div>
+  </section>
+
+
+
+
+
+
     <!-- contact section -->
 
-    <section class="my-11 p-4 bg-gray-100" id="contact">
+    <section class="my-11 p-4 overflow-hidden bg-gray-100" id="contact">
 
         <h1 class="text-center my-11 text-3xl font-semibold">Contact</h1>
 
@@ -279,6 +432,7 @@ Contact with me in any platform.
 
 
 
+
     <!-- footer section -->
     <footer class="bg-gray-800 text-white my-11 p-4 text-center">
         <p>&copy; 2025 Your Name. All rights reserved.</p>
@@ -287,14 +441,38 @@ Contact with me in any platform.
 
 
 
+
+
+
+
+<!-- GSAP CDN -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
+
+<!-- ScrollToPlugin -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
 
+<!-- ScrollTrigger -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+
 <!-- ScrollSmoother requires ScrollTrigger -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
 
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
     <!-- Jquery link -->
