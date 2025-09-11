@@ -21,8 +21,11 @@
     <title>Document</title>
 
 </head>
-<body>
+<body >
 
+      <div id="smooth-wrapper">
+    <div id="smooth-content">
+   
     <!-- header section -->
     <header>
 
@@ -53,14 +56,16 @@
 
 
 
+
     <!-- main section -->
-    <main class="container  mx-auto my-11 p-4 text-center">
+    <main   class="container  mx-auto my-11 p-4 text-center">
 
+    
 
-
+  
 
       <!-- About Me Section -->
-        <section id="about" class="container mx-auto text-center  bg-gray-100 lg:p-8 flex gap-8 flex-col md:flex-row  lg:flex-row items-center lg:justify-between md:space-y-0 md:space-x-6">
+        <section   id="about" class="container mx-auto text-center  bg-gray-100 lg:p-8 flex gap-8 flex-col md:flex-row  lg:flex-row items-center lg:justify-between md:space-y-0 md:space-x-6">
 
 
             <!-- description -->
@@ -194,7 +199,7 @@ Contact with me in any platform.
 
 
         <!-- Project Section -->
-         <section class="my-11 p-4" id="projects">
+         <section id="project projects" class="my-11 p-4" >
             <h1 class="text-center overflow-hidden text-3xl font-semibold ">Projects </h1>
 
 
@@ -234,7 +239,7 @@ Contact with me in any platform.
 
         <!-- Swiper Slider Section -->
    
-<section class="p-8 bg-gray-100">
+<section  class="p-8 bg-gray-100">
   
 
  
@@ -323,7 +328,7 @@ Contact with me in any platform.
 
 <!-- LightBox2 Images Gallery-->
   
-  <section class="mt-32 overflow-hidden">
+  <section  id="Image" class="mt-32 overflow-hidden">
 
 
       <div>
@@ -332,28 +337,28 @@ Contact with me in any platform.
       </div>
 
 
-     <div class="mx-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-6xl ">
-    <a href="https://picsum.photos/id/1015/1200/800" data-lightbox="portfolio" data-title="Project 1">
+     <div  class="mx-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-6xl ">
+    <a   data-speed="0.5" id="ima1"  href="https://picsum.photos/id/1015/1200/800" data-lightbox="portfolio" data-title="Project 1">
       <img src="https://picsum.photos/id/1015/500/300" class="rounded-xl mx-auto shadow-lg hover:scale-105 transition" />
     </a>
 
-    <a href="https://picsum.photos/id/1025/1200/800" data-lightbox="portfolio" data-title="Project 2">
-      <img src="https://picsum.photos/id/1025/500/300" class="rounded-xl mx-au mx-auto shadow-lg hover:scale-105 transition" />
+    <a  data-speed="0.5" id="ima2" href="https://picsum.photos/id/1025/1200/800" data-lightbox="portfolio" data-title="Project 2">
+      <img src="https://picsum.photos/id/1025/500/300" class="rounded-xl  mx-auto shadow-lg hover:scale-105 transition" />
     </a>
 
-    <a href="https://picsum.photos/id/1035/1200/800" data-lightbox="portfolio" data-title="Project 3">
+    <a   data-speed="0.5" href="https://picsum.photos/id/1035/1200/800" data-lightbox="portfolio" data-title="Project 3">
       <img src="https://picsum.photos/id/1035/500/300" class="rounded-xl  mx-auto shadow-lg hover:scale-105 transition" />
     </a>
 
-    <a href="https://picsum.photos/id/1045/1200/800" data-lightbox="portfolio" data-title="Project 4">
+    <a  data-speed="0.5"  href="https://picsum.photos/id/1045/1200/800" data-lightbox="portfolio" data-title="Project 4">
       <img src="https://picsum.photos/id/1045/500/300" class="rounded-xl mx-auto shadow-lg hover:scale-105 transition" />
     </a>
     
-    <a href="https://picsum.photos/id/1055/1200/800" data-lightbox="portfolio" data-title="Project 5">
+    <a   href="https://picsum.photos/id/1055/1200/800" data-lightbox="portfolio" data-title="Project 5">
       <img src="https://picsum.photos/id/1055/500/300" class="rounded-xl mx-auto shadow-lg hover:scale-105 transition" />
     </a>
 
-    <a href="https://picsum.photos/id/1065/1200/800" data-lightbox="portfolio" data-title="Project 6">
+    <a  href="https://picsum.photos/id/1065/1200/800" data-lightbox="portfolio" data-title="Project 6">
       <img src="https://picsum.photos/id/1065/500/300" class="rounded-xl mx-auto shadow-lg hover:scale-105 transition" />
     </a>
 
@@ -374,7 +379,7 @@ Contact with me in any platform.
 
 
 
-  
+
   <!-- Calender -->
     <section class="my-11">
       <div>
@@ -444,9 +449,7 @@ Contact with me in any platform.
 
   
 
-
     </main>
-
 
 
 
@@ -456,8 +459,8 @@ Contact with me in any platform.
     </footer>
 
 
-
-
+ </div>
+  </div>
 
 
 
@@ -465,19 +468,14 @@ Contact with me in any platform.
 <!-- GSAP CDN -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-
 <!-- ScrollToPlugin -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
 
 <!-- ScrollTrigger -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 
-
 <!-- ScrollSmoother requires ScrollTrigger -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-
-
-
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -485,24 +483,14 @@ Contact with me in any platform.
 <!-- Lightbox2 JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
+<!-- FullCalendar -->
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.19/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.19/index.global.min.js"></script>
 
-<!-- Callender CDN -->
-  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.19/index.global.min.js'></script>
-  
-    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.19/index.global.min.js'></script>
-    <script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-    <!-- Jquery link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <!-- javascript link -->
-    <script src="index.js"></script>
-
+<!-- Your Custom JS -->
+<script src="index.js"></script>
 </body>
 </html>

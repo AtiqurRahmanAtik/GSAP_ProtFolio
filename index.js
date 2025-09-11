@@ -27,18 +27,16 @@
 
  document.addEventListener("DOMContentLoaded", (event) => {
 
-     gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
-      gsap.registerPlugin(ScrollToPlugin);
+    
+     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+      // gsap.registerPlugin(ScrollToPlugin);
 
 
-      
-// ScrollSmooth
-// let smoother = ScrollSmoother.create({
-//   smooth: 2,
-//   effects: true,
-//   normalizeScroll: true
-// });
+ ScrollSmoother.create({
+  smooth: 7, 
+  effects: true, 
 
+});
 
 
 
@@ -98,6 +96,9 @@ TL.from("#pro1", {x: -500, duration:3 , opacity: 0,},'ani')
 .from("#pro_2", {y: -500, duration:3, opacity:0,delay:2})
 .from("#pro3", {x: 500, duration:3, opacity:0}, 'ani')
 
+
+
+// Image Gallery
 
 
 
