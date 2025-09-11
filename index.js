@@ -6,7 +6,6 @@
       gsap.registerPlugin(ScrollToPlugin);
 
 
-
       
 // ScrollSmooth
 // let smoother = ScrollSmoother.create({
