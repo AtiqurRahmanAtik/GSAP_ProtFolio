@@ -186,10 +186,10 @@ gsap.to("#skills ul div", {
 // Education
 // gsap.from("#edu1", {x:-500, duration:0, })
 
-let EL = gsap.timeline();
+// let EL = gsap.timeline();
 
-EL.from("#edu1", {x: -500, duration:3 , opacity: 0,},'ani')
-.from("#edu2", {x: 500, duration:3, opacity:0,delay:2},'ani')
+// EL.from("#edu1", {x: -500, duration:3 , opacity: 0,},'ani')
+// .from("#edu2", {x: 500, duration:3, opacity:0,delay:2},'ani')
 
 
 
@@ -241,7 +241,25 @@ $('.img').hover(function(){
 })
 
 
+// NavBar
+$("#pages").click(function(){
 
+  $("#pageShow").toggle();
+})
+
+
+
+      // Toggle mobile menu
+      // $("#menuBtn").click(function () {
+      //   $("#mobileMenu").toggleClass("hidden");
+      // });
+
+      // // Toggle mobile dropdown
+      // $("#mobileDropdownBtn").click(function () {
+      //   $("#mobileDropdownMenu").toggleClass("hidden");
+      //   $("#mobileDropdownIcon").toggleClass("rotate-180"); // rotate arrow
+      // });
+   
 
 // form submission
 
@@ -258,20 +276,20 @@ $('#contact_form').submit(function(e){
         message: message,
     };
 
-   if(name === "" || email === "" || message === ""){
-    alert("Please fill up the form");
-   }
+  //  if(name === "" || email === "" || message === ""){
+  //   alert("Please fill up the form");
+  //  }
    
 
-//    $('#show_value').text(`User Name : ${formData?.name} <br>
-//     ${formData?.email} and Message ${formData?.message}` );
+   $('#show_value').text(`User Name : ${formData?.name} 
+    ${formData?.email} and Message ${formData?.message}` );
 
-    alert(`User Name : ${formData?.name} email ${formData?.email} message ${formData?.message}` );
-    // console.log("Form Data Submitted:", formData);
+    // alert(`User Name : ${formData?.name} email ${formData?.email} message ${formData?.message}` );
+    // // console.log("Form Data Submitted:", formData);
 })
 
 
-$("play".click(function(){
+$(".play".click(function(){
     alert("hello world");
 }))
 
@@ -304,3 +322,10 @@ $("play".click(function(){
     });
 
 
+
+
+
+
+    fetch('https://fakestoreapi.com/products')
+  .then(response => response.json())
+  .then(data => console.log(data));
