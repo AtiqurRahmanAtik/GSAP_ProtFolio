@@ -11,6 +11,35 @@
 
 
 
+
+
+  
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+
+
 // Callender Slider
   document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
@@ -25,7 +54,7 @@
 
       
 
-
+ $(document).ready(function () {
 // social media link
 function linkedIn() {
     window.location.href = 'https://www.linkedin.com/in/md-atiqur-rahman-atik/';
@@ -43,24 +72,40 @@ function facebook() {
     window.location.href = 'https://www.facebook.com/your-profile';
 }
 
+  });
 
 
 
+// NavBar Pages
+
+   $(document).ready(function () {
+     
+      $("#pages").click(function () {
+        $(".pageShow").toggleClass("hidden");
+      });
+
+    });
+
+
+
+
+     $(document).ready(function () {
 $('.read').click(function(){
     $('.p_hide').toggle(1000);
 });
 
+  });
 
+
+
+
+   $(document).ready(function () {
 $('.img').hover(function(){
     $(this).fadeToggle(1000);
 })
 
+    });
 
-// NavBar
-$("#pages").click(function(){
-
-  $("#pageShow").toggle();
-})
 
 
 
@@ -103,8 +148,9 @@ $("#pages").click(function(){
 
 
 
-
+ 
 // gsap animation
+   
 
  document.addEventListener("DOMContentLoaded", (event) => {
 
@@ -296,7 +342,7 @@ ML.from("msg", {x: -500, duration:3 , opacity: 0,},'ani')
 });
 
 
-
+ 
 
 
 
@@ -313,6 +359,16 @@ ML.from("msg", {x: -500, duration:3 , opacity: 0,},'ani')
       //   $("#mobileDropdownIcon").toggleClass("rotate-180"); // rotate arrow
       // });
    
+
+
+
+
+      
+
+
+
+
+
 
 // form submission
 
@@ -342,10 +398,9 @@ $('#contact_form').submit(function(e){
 })
 
 
-$(".play".click(function(){
+$(".play").click(function(){
     alert("hello world");
-}))
-
+});
 
 
 
@@ -360,30 +415,6 @@ $(".play".click(function(){
 
 
 
-    const progressCircle = document.querySelector(".autoplay-progress svg");
-    const progressContent = document.querySelector(".autoplay-progress span");
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      on: {
-        autoplayTimeLeft(s, time, progress) {
-          progressCircle.style.setProperty("--progress", 1 - progress);
-          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-        }
-      }
-    });
 
 
 
