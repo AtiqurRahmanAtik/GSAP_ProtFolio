@@ -23,6 +23,87 @@
 
 
 
+      
+
+
+// social media link
+function linkedIn() {
+    window.location.href = 'https://www.linkedin.com/in/md-atiqur-rahman-atik/';
+}
+
+function github() {
+    window.location.href = 'https://github.com/your-profile';
+}
+
+function twitter() {
+    window.location.href = 'https://twitter.com/your-profile';
+}
+
+function facebook() {
+    window.location.href = 'https://www.facebook.com/your-profile';
+}
+
+
+
+
+$('.read').click(function(){
+    $('.p_hide').toggle(1000);
+});
+
+
+$('.img').hover(function(){
+    $(this).fadeToggle(1000);
+})
+
+
+// NavBar
+$("#pages").click(function(){
+
+  $("#pageShow").toggle();
+})
+
+
+
+
+// Projects Button
+  //       $(document).ready(function(){
+  
+  //   $('#btnPro1').click(function(){
+
+  //     alert('click')
+
+  //   })
+  // });
+
+
+
+
+  
+
+      // project See button
+      
+   
+ $(document).ready(function () {
+      $('#btnPro1').click(function () {
+        // window.location.href = 'https://careerbuilder-97259.web.app/';
+        window.location.replace('https://careerbuilder-97259.web.app/');
+      });
+
+      $('#btnPro2').click(function () {
+        window.location.href = 'https://painting-and-drawing-2f67c.web.app/';
+      });
+
+      $('#btnPro3').click(function () {
+        window.location.href = 'https://real-estate-project-e543c.web.app/';
+      });
+    });
+
+
+
+
+
+
+
 // gsap animation
 
  document.addEventListener("DOMContentLoaded", (event) => {
@@ -154,6 +235,14 @@ TL.from("#pro1", {x: -500, duration:3 , opacity: 0,},'ani')
     });
 
 
+
+
+
+    
+
+
+
+
 // document.querySelector("a[href='#education']").addEventListener("click", function(e){
 //         e.preventDefault();
 
@@ -184,12 +273,14 @@ gsap.to("#skills ul div", {
 
 
 // Education
-// gsap.from("#edu1", {x:-500, duration:0, })
+gsap.from("#edu1", {x:-500, duration:0, })
 
-// let EL = gsap.timeline();
+let EL = gsap.timeline();
 
-// EL.from("#edu1", {x: -500, duration:3 , opacity: 0,},'ani')
-// .from("#edu2", {x: 500, duration:3, opacity:0,delay:2},'ani')
+EL.from("#edu1", {x: -500, duration:3 , opacity: 0,},'ani')
+.from("#edu2", {x: 500, duration:3, opacity:0,delay:2},'ani')
+
+
 
 
 
@@ -208,44 +299,6 @@ ML.from("msg", {x: -500, duration:3 , opacity: 0,},'ani')
 
 
 
-
-
-
-// social media link
-function linkedIn() {
-    window.location.href = 'https://www.linkedin.com/in/md-atiqur-rahman-atik/';
-}
-
-function github() {
-    window.location.href = 'https://github.com/your-profile';
-}
-
-function twitter() {
-    window.location.href = 'https://twitter.com/your-profile';
-}
-
-function facebook() {
-    window.location.href = 'https://www.facebook.com/your-profile';
-}
-
-
-
-
-$('.read').click(function(){
-    $('.p_hide').toggle(1000);
-});
-
-
-$('.img').hover(function(){
-    $(this).fadeToggle(1000);
-})
-
-
-// NavBar
-$("#pages").click(function(){
-
-  $("#pageShow").toggle();
-})
 
 
 
@@ -296,6 +349,17 @@ $(".play".click(function(){
 
 
 
+
+
+  
+
+
+
+
+
+
+
+
     const progressCircle = document.querySelector(".autoplay-progress svg");
     const progressContent = document.querySelector(".autoplay-progress span");
     var swiper = new Swiper(".mySwiper", {
@@ -324,8 +388,3 @@ $(".play".click(function(){
 
 
 
-
-
-    fetch('https://fakestoreapi.com/products')
-  .then(response => response.json())
-  .then(data => console.log(data));
