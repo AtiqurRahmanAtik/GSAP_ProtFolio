@@ -459,32 +459,86 @@ $(".play").click(function(){
 
 
       // Modal 
-    $(document).on("click", ".calendar-day", function () {
-  let day = $(this).text().trim(); 
-  let message = $("#modalText").val();  
+//     $(document).on("click", ".calendar-day", function () {
+//   let day = $(this).text().trim(); 
+//   let message = $("#modalText").val();  
   
-  console.log(`Day is:, ${day} and message ${message}`);
+//   console.log(`Day is:, ${day} and message ${message}`);
 
-  $("#modalDate").text(day);         // show inside modal
-  $("#dateModal").removeClass("hidden");
-});
+//   $("#modalDate").text(day);         // show inside modal
+//   $("#dateModal").removeClass("hidden");
+// });
 
 
 
 
 // Submit Button
-  $("#submitModal").click(function(){
+  // $("#submitModal").click(function(){
 
-      let day = $(this).text().trim(); 
-  let message = $("#modalText").val();  
+  //     let day = $(this).text().trim(); 
+  // let message = $("#modalText").val();  
   
-  console.log(`Day is:, ${day} and message ${message}`);
+  // console.log(`Day is:, ${day} and message ${message}`);
 
-      $("calendar-day").text(message);
-      //  $("#dateModal").removeClass("hidden");
-          $("#dateModal").addClass("hidden"); 
+  //     $(".calendar-day").text(message);
+  //     //  $("#dateModal").removeClass("hidden");
+  //         $("#dateModal").addClass("hidden"); 
 
-  })
+  // })
+
+
+
+
+        // close modal
+  // $("#closeModal").click(function () {
+
+  //    $("#dateModal").addClass("hidden"); 
+     
+    
+  //   });
+
+
+
+
+
+
+
+
+
+
+let selectedDayElement = null; // global variable to track clicked day
+
+
+// When a calendar day is clicked
+$(document).on("click", ".calendar-day", function () {
+
+  
+  let day = $(this).text().trim();   // get day
+  $("#modalDate").text(day);       // show day in modal
+  $("#modalText").val("");         // clear input
+  $("#dateModal").removeClass("hidden");
+
+  selectedDayElement = $(this);    // store the clicked element
+});
+
+
+
+// Submit Button
+$("#submitModal").click(function () {
+  let day = $("#modalDate").text();     // get day from modal
+  let message = $("#modalText").val();  // get input text
+
+  console.log(`Day is: ${day}, message: ${message}`);
+
+  if (selectedDayElement) {
+    selectedDayElement.text(`${day} (${message})`); // update the clicked day with message
+  }
+
+  $("#dateModal").addClass("hidden"); // close modal
+});
+
+
+
 
 
 
@@ -496,6 +550,9 @@ $(".play").click(function(){
      
     
     });
+
+
+
 
 
 //       $(document).on("click", ".calendar-day", function () {
