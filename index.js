@@ -379,16 +379,168 @@ $(".play").click(function(){
 
 
 
+
+
+
+// Callender Demo
+   $(document).ready(function () {
+
+      let today = new Date();
+      let currentMonth = today.getMonth();
+      let currentYear = today.getFullYear();
+
+      const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      console.log(monthNames[currentMonth]);
+
+
+
+
+      function renderCalendar(month, year) {
+        $("#calendarDays").empty();
+
+        $("#monthYear").text(`${monthNames[currentMonth]} ${year}`);
+
+        let firstDay = new Date(year, month).getDay();
+        console.log(firstDay)
+        let daysInMonth = new Date(year, month + 1, 0).getDate();
+        console.log(daysInMonth)
+
+        
+        // Empty cells before start of month
+        for (let i = 0; i < firstDay; i++) {
+          $("#calendarDays").append(`<div></div>`);
+        }
+
+
+        // Days of the month
+        for (let day = 1; day <= daysInMonth; day++) {
+          let isToday =
+            day === today.getDate() &&
+            year === today.getFullYear() &&
+            month === today.getMonth();
+
+          $("#calendarDays").append(`
+            <div class="calendar-day p-10 app rounded cursor-pointer hover:bg-green-200 ${
+              isToday ? "bg-green-400 text-white font-bold" : "bg-gray-100"
+            }">
+              ${day}
+            </div>
+          `);
+        }
+      }
+
+      // Initial render
+      renderCalendar(currentMonth, currentYear);
+
+      // Button events
+      $("#prev").click(function () {
+        currentMonth--;
+        if (currentMonth < 0) {
+          currentMonth = 11;
+          currentYear--;
+        }
+        renderCalendar(currentMonth, currentYear);
+      });
+
+      $("#next").click(function () {
+        currentMonth++;
+        if (currentMonth > 11) {
+          currentMonth = 0;
+          currentYear++;
+        }
+        renderCalendar(currentMonth, currentYear);
+      });
+
+
+
+
+      // Modal 
+    $(document).on("click", ".calendar-day", function () {
+  let day = $(this).text().trim(); 
+  let message = $("#modalText").val();  
   
+  console.log(`Day is:, ${day} and message ${message}`);
+
+  $("#modalDate").text(day);         // show inside modal
+  $("#dateModal").removeClass("hidden");
+});
 
 
 
 
+// Submit Button
+  $("#submitModal").click(function(){
+
+      let day = $(this).text().trim(); 
+  let message = $("#modalText").val();  
+  
+  console.log(`Day is:, ${day} and message ${message}`);
+
+      $("calendar-day").text(message);
+      //  $("#dateModal").removeClass("hidden");
+          $("#dateModal").addClass("hidden"); 
+
+  })
 
 
 
 
+        // close modal
+  $("#closeModal").click(function () {
+
+     $("#dateModal").addClass("hidden"); 
+     
+    
+    });
+
+
+//       $(document).on("click", ".calendar-day", function () {
+//   let day = $(this).data("day");
+//   let month = $(this).data("month");
+//   let year = $(this).data("year");
+
+//   console.log(`Day is ${day}, Full date: ${day}-${month + 1}-${year}`);
+// });
 
 
 
 
+      // Click event for days
+  // $(document).on("click", "#calendarDays div", function () {
+  //   let day = $(this).data("day");
+  //   let month = $(this).data("month");
+  //   let year = $(this).data("year");
+
+  //   let fullDate = `${day} ${monthNames[month]} ${year}`;
+  //   console.log(fullDate)
+
+  //   // Show in modal
+  //   $("#modalDate").text(fullDate);
+  //   $("#dateModal").removeClass("hidden");
+  // });
+
+
+      
+    });
+
+
+
+
+     
+
+
+
+    
+    // $(document).ready(function () {
+
+    //   $('.day').click(function(){
+    //     var day = parseInt($(this).attr("#calendarDays"));
+    //     console.log(day)
+    //     // alert(`day `,day);
+    //   })
+
+    //  });

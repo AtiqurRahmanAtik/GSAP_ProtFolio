@@ -453,24 +453,79 @@ Contact with me in any platform.
 
 
 
-  <!-- Calender -->
-    <section class="my-11">
-      <div>
-       
-        <h1 class="text-center font-bold text-3xl my-11">Calender </h1>
+<!-- callender -->
 
-      </div>
-
-     
+  <section class="relative my-11">
 
 
-        <div class="mx-auto max-w-4xl  " id='calendar'></div>
-    </section>
+    <div>
+      <h1 class="text-3xl font-bold text-center my-5 ">Calendar </h1>
+    </div>
+
+      <div class="w-full mx-auto max-w-3xl bg-white shadow-lg rounded-lg p-4">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-4">
+      <button id="prev" class="px-3 py-1 bg-green-400 text-white rounded">Prev</button>
+      <h2 id="monthYear" class="text-xl font-bold"></h2>
+      <button id="next" class="px-3 py-1 bg-green-400 text-white rounded">Next</button>
+    </div>
+
+    <!-- Weekdays -->
+    <div class="grid grid-cols-7 text-center font-semibold border-b-2 pb-2">
+      <div>Sun</div>
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+    </div>
+
+    <!-- Days -->
+    <div id="calendarDays" class=" grid grid-cols-7 text-center m-2 gap-2"></div>
+
+
+  </div>
+
+
+
+  
+  <!-- Modal -->
+<!-- <div id="dateModal" class="hidden fixed inset-0 bg-black bg-opacity-50  items-center justify-center">
+  <div class="bg-white rounded-lg p-6 shadow-lg w-80 text-center">
+    <h3 class="text-xl font-bold mb-4">Selected Date</h3>
+    <p id="modalDate" class="text-lg text-green-600 font-semibold"></p>
+    <button id="closeModal" class="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Close</button>
+  </div>
+</div> -->
 
 
 
 
- 
+<!-- Modal Here -->
+<div id="dateModal" class="absolute hidden lg:top-20 lg:-left-[-28rem] lg:min-w-96 my-5">
+  <div class="bg-gray-400 p-6 rounded shadow">
+
+    <div class="mb-4 text-white text-2xl">Selected date: <span id="modalDate" class="text-2xl text-green-400 font-bold"></span></div>
+
+    <div>
+      <input class="border-2 py-3 text-2xl " placeholder="Enter Your Text" type="text" name="text" id="modalText">
+    </div>
+
+    <div class="text-right my-3">
+      <button id="closeModal" class="px-3 py-1 bg-green-500 text-2xl text-white rounded">Close</button>
+
+
+      <button id="submitModal" class="px-3 py-1 bg-green-500 text-2xl text-white rounded">submit</button>
+
+
+    </div>
+  </div>
+</div>
+
+</section>
+
+
 
 
 
