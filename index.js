@@ -27,7 +27,7 @@
 
       
 
- $(document).ready(function () {
+
 // social media link
 function linkedIn() {
     window.location.href = 'https://www.linkedin.com/in/md-atiqur-rahman-atik/';
@@ -45,7 +45,7 @@ function facebook() {
     window.location.href = 'https://www.facebook.com/your-profile';
 }
 
-  });
+
 
 
 
@@ -433,8 +433,10 @@ $(".play").click(function(){
         }
       }
 
+
       // Initial render
       renderCalendar(currentMonth, currentYear);
+
 
       // Button events
       $("#prev").click(function () {
@@ -445,6 +447,7 @@ $(".play").click(function(){
         }
         renderCalendar(currentMonth, currentYear);
       });
+
 
       $("#next").click(function () {
         currentMonth++;
@@ -506,16 +509,16 @@ $(".play").click(function(){
 
 
 
-let selectedDayElement = null; // global variable to track clicked day
+let selectedDayElement = null; // global variable 
 
 
 // When a calendar day is clicked
 $(document).on("click", ".calendar-day", function () {
 
   
-  let day = $(this).text().trim();   // get day
-  $("#modalDate").text(day);       // show day in modal
-  $("#modalText").val("");         // clear input
+  let day = $(this).text().trim();   
+  $("#modalDate").text(day);     
+  $("#modalText").val("");         
   $("#dateModal").removeClass("hidden");
 
   selectedDayElement = $(this);    // store the clicked element
@@ -523,15 +526,16 @@ $(document).on("click", ".calendar-day", function () {
 
 
 
+
 // Submit Button
 $("#submitModal").click(function () {
-  let day = $("#modalDate").text();     // get day from modal
-  let message = $("#modalText").val();  // get input text
+  let day = $("#modalDate").text();     
+  let message = $("#modalText").val();  
 
   console.log(`Day is: ${day}, message: ${message}`);
 
   if (selectedDayElement) {
-    selectedDayElement.text(`${day} (${message})`); // update the clicked day with message
+    selectedDayElement.text(`${day} (${message})`);
   }
 
   $("#dateModal").addClass("hidden"); // close modal
