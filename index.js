@@ -155,32 +155,50 @@ gsap.fromTo(".social",{opacity:0, duration:2,delay:2}, {opacity:1,duration:2,del
 
 
 // Staggers using Skill section
-// let tl = gsap.timeline({
+let tl = gsap.timeline({
 
-//     scrollTrigger: {
-// 		trigger: '#skills',
-//          start: "0% 70%", 
-// 		end: "70% 100%",
-//         duration:3,
-       
-//         scrub : 1,
-// 		pin: true,
-// }
-//  });
+    scrollTrigger: {
+		trigger: '#projects',
+    start: "top top",
+    end: "+=1000",
+    duration:3,
+    scrub: 1,
+    pin: true,
+    // markers: true
+}
+ });
 
-//  tl.to("#skills ul div", {
-//   duration: 1,
-//   scale: 0.5,
-//   y: 40,
-//   ease: "bounce",
-//   yoyo: true,
-//     repeat: -1,
-//   stagger: {
-//     grid: [3,3,3],
-//     from: "center",
-//     amount: 1.5
-//   }
-// });
+ tl.from("#pro1", {x: -500, duration:3 , opacity: 0,},'ani')
+.from("#pro_2", {y: -500, duration:3, opacity:0,delay:2})
+.from("#pro3", {x: 500, duration:3, opacity:0}, 'ani')
+
+
+
+
+
+// education ScrollTrigger
+
+let El = gsap.timeline({
+
+    scrollTrigger: {
+		trigger: '#education',
+    start: "top top",
+    end: "+=1000",
+    duration:3,
+    scrub: 1,
+    pin: true,
+    // markers: true
+}
+ });
+
+
+
+
+El.from("#edu1", {x: -500,  opacity: 0,},'ani')
+.from("#edu2", {x: 500,  opacity:0,},'ani')
+
+
+
 
 
 
@@ -190,15 +208,17 @@ gsap.fromTo(".social",{opacity:0, duration:2,delay:2}, {opacity:1,duration:2,del
 
 
 // Projects
-let TL = gsap.timeline();
+// let TL = gsap.timeline();
 
-TL.from("#pro1", {x: -500, duration:3 , opacity: 0,},'ani')
-.from("#pro_2", {y: -500, duration:3, opacity:0,delay:2})
-.from("#pro3", {x: 500, duration:3, opacity:0}, 'ani')
+// TL.from("#pro1", {x: -500, duration:3 , opacity: 0,},'ani')
+// .from("#pro_2", {y: -500, duration:3, opacity:0,delay:2})
+// .from("#pro3", {x: 500, duration:3, opacity:0}, 'ani')
+
 
 
 
 // Image Gallery
+
 
 
 
@@ -292,12 +312,12 @@ gsap.to("#skills ul div", {
 
 
 // Education
-gsap.from("#edu1", {x:-500, duration:0, })
+// gsap.from("#edu1", {x:-500, duration:0, })
 
-let EL = gsap.timeline();
+// let EL = gsap.timeline();
 
-EL.from("#edu1", {x: -500, duration:3 , opacity: 0,},'ani')
-.from("#edu2", {x: 500, duration:3, opacity:0,delay:2},'ani')
+// EL.from("#edu1", {x: -500, duration:3 , opacity: 0,},'ani')
+// .from("#edu2", {x: 500, duration:3, opacity:0,delay:2},'ani')
 
 
 
@@ -424,7 +444,7 @@ $(".play").click(function(){
             month === today.getMonth();
 
           $("#calendarDays").append(`
-            <div class="calendar-day p-10 app rounded cursor-pointer hover:bg-green-200 ${
+            <div class="calendar-day p-10  app rounded cursor-pointer hover:bg-green-200 ${
               isToday ? "bg-green-400 text-white font-bold" : "bg-gray-100"
             }">
               ${day}
